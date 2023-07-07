@@ -302,7 +302,7 @@ The expression `(if A B C)` is equivalent to:
       (0 C)
       (_ (tag _) B))
 
-That is, `C` is executed if `A` evaluates to zero, and `C` otherwise.
+That is, `C` is executed if `A` evaluates to zero, and `B` otherwise.
 
 Complex mixtures of conditions in `switch` expressions perform well -
 the OCaml compiler generates good code for pattern-matching.
