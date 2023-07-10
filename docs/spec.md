@@ -88,7 +88,7 @@ arithmetic.
 
 Various numeric operations are defined:
 
-  - *Arithmetic operations*: `+`, `-`, `*`, `/`, `%` (modulo), `neg` (unary negation)
+  - *Arithmetic operations*: `+`, `-`, `*`, `/`, `%` (modulo), `neg` (unary negation), `not` (bitwise logical negation)
   - *Bitwise operations*: `&`, `|`, `^`, `<<`, `>>` (zero-shifting), `a>>` (sign extending)
   - *Numeric comparisons*: `<`, `>`, `<=`, `>=`, `==`
 
