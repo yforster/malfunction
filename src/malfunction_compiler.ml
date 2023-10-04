@@ -634,10 +634,11 @@ let setup_options options =
   Clflags.dump_lambda := false;
   Clflags.dump_cmm := false;
   Clflags.keep_asm_file := false;
-  Clflags.include_dirs := [Findlib.package_directory "zarith"];
+  Clflags.include_dirs := [Findlib.package_directory "zarith"; Findlib.package_directory "coq-core.plugins.ltac" ; Findlib.package_directory "coq-metacoq-template-ocaml.plugin" ; Findlib.package_directory "stdlib-shims" ; Findlib.package_directory "coq-core.kernel" ];
   Clflags.inlining_report := false;
   Clflags.dlcode := true;
   Clflags.shared := false;
+  Clflags.for_package := Some "Metacoq_verified_malfunction_plugin";
 
   Clflags.(
     default_simplify_rounds := 2;
