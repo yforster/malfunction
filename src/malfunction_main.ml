@@ -68,6 +68,7 @@ let parse_args args =
     | "-shared" :: rest -> opts := `Shared :: !opts; parse_opts mode rest
     | "-for-pack" :: o :: rest -> opts := `ForPack o :: !opts; parse_opts mode rest
     | "-package" :: s :: rest -> opts := `Package s :: !opts; parse_opts mode rest
+    | "-O2" :: rest -> opts := `Optimize :: !opts; parse_opts mode rest
     | i :: rest ->
        (match !impl with None -> (impl := Some i; parse_opts mode rest) | _ -> usage ())
     | [] -> run mode !opts !impl !output in
