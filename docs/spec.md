@@ -66,9 +66,8 @@ which evaluates the single sexp `E` ignoring its result has this form:
 
 Inputs compiled with `malfunction cmx` (that is, modules that are
 later linked with other modules) may specify any number of values in
-the `export` sexp, which must be in the same order as they are listed
-in the corresponding `.mli` file.
-
+the `export` sexp. The exported definitions are matched by *order* and *not*
+by name to the corresponding `.mli` file.
 
 ## Numbers and arithmetic
 
@@ -302,7 +301,7 @@ The expression `(if A B C)` is equivalent to:
       (0 C)
       (_ (tag _) B))
 
-That is, `C` is executed if `A` evaluates to zero, and `C` otherwise.
+That is, `C` is executed if `A` evaluates to zero, and `B` otherwise.
 
 Complex mixtures of conditions in `switch` expressions perform well -
 the OCaml compiler generates good code for pattern-matching.
